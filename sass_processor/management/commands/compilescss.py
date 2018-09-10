@@ -25,6 +25,10 @@ from sass_processor.utils import get_custom_functions
 
 __all__ = ['get_template', 'Command']
 
+try:
+    str = unicode
+except NameError:
+    pass
 
 class FuncCallVisitor(ast.NodeVisitor):
 
